@@ -30,7 +30,7 @@ def gradient_descent(X, y, theta, alpha, iterations):
 if __name__ == '__main__':
     print(warm_up_exercise())
 
-    data = np.array(np.loadtxt("ex1data1.txt", dtype='float64', delimiter=','))
+    data = np.array(np.loadtxt("ex1data2.txt", dtype='float64', delimiter=','))
 
     x = data[:, :1]
     y = data[:, 1:2]
