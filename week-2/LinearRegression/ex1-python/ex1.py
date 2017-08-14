@@ -9,10 +9,9 @@ def warm_up_exercise():
 
 def compute_cost(X, y, theta):
     m = y.shape[0]
-    j = np.sum((X.dot(theta)) ** 2) / (2 * m)
-    # J = (1/(2*m))*sum(power((X*theta - y),2));
+    J = np.sum(np.square(X.dot(theta) - y)) / (2 * m)
 
-    return j
+    return J
 
 
 def gradient_descent(X, y, theta, alpha, iterations):
@@ -59,4 +58,4 @@ if __name__ == '__main__':
     print('theta is [-1; 2] and compute_cost is ', compute_cost(X, y, np.array([[-1], [2]])))
     print('Expected: 54.24')
 
-    # theta, hist = gradient_descent(X, y, theta, alpha, iterations)
+    theta, hist = gradient_descent(X, y, theta, alpha, iterations)
